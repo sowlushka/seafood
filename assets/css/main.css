@@ -26,6 +26,16 @@ h1 {
 }
 
 
+.logo{
+    width: 50%;
+}
+
+.logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
 /*Стиль для Хлебных крошек, для выделения текущей страницы*/
 .curr-page-position {
     display: inline;
