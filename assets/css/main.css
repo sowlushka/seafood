@@ -7,10 +7,6 @@ body {
     font-family: 'Raleway', sans-serif;
 
     background: white;
-    /*Поля проекта для широкоэкранного макета*/
-    padding: 54px 250px 0px 250px;
-
-    /*Удаляем горизонтальную полосу прокрутки*/
 }
 
 a {
@@ -33,12 +29,4 @@ h1 {
 .logo img{
     width: 100%;
     object-fit: cover;
-}
-
-
-/*Стиль для Хлебных крошек, для выделения текущей страницы*/
-.curr-page-position {
-    display: inline;
-    font-size: 17px;
-    color: #919191;
 }
