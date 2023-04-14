@@ -1,0 +1,49 @@
+header{
+    display: flex;
+    margin: 150px auto;
+    flex: 1 1;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.logo{
+    max-width: 44%;
+}
+
+.logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.header-img{
+    max-width:44%;
+}
+
+.header-img img{
+    width: 100%;
+    opacity: 90%;
+}
+
+header nav{
+    width: 100%;
+}
+
+nav{
+    text-align: right;
+}
+
+nav a{
+    display:inline-block;
+    padding: 20px 20px;
+    letter-spacing: -0.05em;
+}
+
+a {
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
