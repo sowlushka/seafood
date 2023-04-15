@@ -1,43 +1,63 @@
+:root{
+    --header-background-image-width: 90vw;
+    --header-background-image-height: 100vh;
+    --header-background-image-scale-x: 150%;
+    --header-background-image-scale-y: 110%;
+    --header-background-image-position-x: 0%; /*Для широких экранов сдвига изображения нет, на маленьких - около 20%*/
+
+    --header-logo-width: 40vw;
+    --header-logo-height: calc(var(--header-logo-width) / 3 * 2); 
+    --header-logo-scale: 100%;
+}
+
+
 header{
-    display: flex;
-    margin: 150px auto;
-    flex: 1 1;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    background-image: url("../img/header1.jpg");
+    height: var(--header-background-image-height);
+    background-size: var(--header-background-image-scale-x) var(--header-background-image-scale-y);
+    background-position: var(--header-background-image-position-x) 0%;
+
 }
 
 .logo{
-    max-width: 44%;
+    position:absolute;
+    top: 1vh;
+    left: 3vw;
+    height: var(--header-logo-height);
+    width: var(--header-logo-width);
+    scale: var(--header-logo-scale);
+    transform-origin: 0 0;
+
+    margin-top: 20px;
+    margin-left: 3%;
+    float: left;
 }
 
 .logo img{
     width: 100%;
-    object-fit: cover;
-}
+    height: 100%;
+    /*object-fit: contain;*/
+    overflow: visible;
 
-
-
-.header-img{
-    max-width:44%;
-}
-
-.header-img img{
-    width: 100%;
-    opacity: 90%;
 }
 
 header nav{
     width: 100%;
 }
 
+
+
 nav{
     text-align: right;
 }
 
+.nav-display{
+    display: block;
+}
+
 nav a{
     display:inline-block;
-    padding: 20px 20px;
+    padding: 20px 1vw;
     letter-spacing: -0.05em;
 }
 
@@ -46,4 +66,42 @@ a {
     font-weight: 500;
     text-decoration: none;
     color: black;
+}
+
+@media all and (orientation: landscape){
+        :root{
+        --header-logo-scale: 70%;
+    }
+}
+
+
+@media (max-width: 1000px)
+{
+    :root{
+    --header-background-image-position-x: 20%;
+    --header-background-image-scale-x: 180%;
+
+    }
+}
+
+@media (max-width: 720px)
+{
+    :root{
+     --header-background-image-position-x: 40%;
+     --header-background-image-scale-y: 100%;
+     /*--header-background-image-scale-x: 180%;*/
+
+    }
+
+    .nav-display{
+        display:none;
+    }
+}
+
+@media (max-width: 720px){
+    :root{
+     --header-background-image-position-x: 45%;
+    --header-background-image-scale-x: 300%;
+
+    }
 }
