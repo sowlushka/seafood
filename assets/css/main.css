@@ -5,7 +5,11 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center 
+}
+
+body *{
+    outline: 1px solid blue;
 }
 
 .body-container {
@@ -14,7 +18,6 @@ body {
     max-width: var(--body-container-max-width);
     width: var(--body-container-width);
     min-height: 250vh;
-    margin: 0vh 100px;
     background-color: #FFFFFF;
 
 }
