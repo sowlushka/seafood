@@ -1,34 +1,40 @@
+@import url(variables.css);
+
 :root{
-    --header-background-image-width: 90vw;
+    --header-margin-horizontal: calc((var( --body-container-width) - 100vw) / 2);
+    --header-background-img-file: url("../img/header2.jpg");
+    --header-background-image-width: 100vw;
     --header-background-image-height: 100vh;
-    --header-background-image-scale-x: 150%;
-    --header-background-image-scale-y: 110%;
+    --header-background-image-scale-x: 100%;
+    --header-background-image-scale-y: 100%;
     --header-background-image-position-x: 0%; /*Для широких экранов сдвига изображения нет, на маленьких - около 20%*/
 
-    --header-logo-width: 40vw;
+    /*Параметры логотипа*/
+    --header-logo-width: 480px;
     --header-logo-height: calc(var(--header-logo-width) / 3 * 2); 
     --header-logo-scale: 100%;
 }
 
 
 header{
-    background-image: url("../img/header1.jpg");
+    background-image: var(--header-background-img-file);
     height: var(--header-background-image-height);
     background-size: var(--header-background-image-scale-x) var(--header-background-image-scale-y);
     background-position: var(--header-background-image-position-x) 0%;
+    margin: 0px var(--header-margin-horizontal);
 
 }
 
 .logo{
     position:absolute;
-    top: 1vh;
-    left: 3vw;
+    top: 0.5vh;
+    left: 10vw;
     height: var(--header-logo-height);
     width: var(--header-logo-width);
     scale: var(--header-logo-scale);
     transform-origin: 0 0;
 
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 3%;
     float: left;
 }
@@ -70,7 +76,7 @@ a {
 
 @media all and (orientation: landscape){
         :root{
-        --header-logo-scale: 70%;
+            --header-background-img-file: url("../img/header2.jpg");
     }
 }
 

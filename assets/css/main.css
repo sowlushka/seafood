@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
-
-:root{
-    --body-container-width: 90vw;/*Ширина контейнера, в котором размещается контент*/
-
-}
+@import url(variables.css);/*Подгружаем константы проекта: ширина контейнера, макс. ширина и т.д.*/
 
 body{
     display: flex;
@@ -14,16 +10,11 @@ body{
 .body-container {
     /*Шрифты для всего проекта*/
     font-family: 'Raleway', sans-serif;
-    width: var(--body-container-width);
+    max-width: var(--body-container-max-width);
+    width: var( --body-container-width);
     min-height: 250vh;
-    margin: 0vh 5vw;
-    
-
-    background-image: url("../img/bckgrnd.jpg");
-    background-color: rgba(230, 230, 230, 0.93);
-    background-repeat: repeat-y;
-    background-size: auto;
-    background-blend-mode: color-dodge;
+    margin: 0vh 100px;
+    background-color: #FFFFFF;
     
 }
 
