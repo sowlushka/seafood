@@ -26,6 +26,7 @@
     <!--Слайдер: https://itchief.ru/javascript/slider -->
 
     <script defer src="assets/js/itc-slider.js"></script><!--Слайдер-->
+    <script defer src="assets/js/header.js"></script>
 
     <script defer src="assets/js/callback.js"></script>
     <link rel="stylesheet" href="assets/css/normalize.css">
@@ -39,9 +40,9 @@
 </head>
 
 <body>
-    <div class="body-container"><!--Обёртка для сайта-->
-        <header>
-            <div class="logo">
+    <div class="body-container" onresize="logoResize();"><!--Обёртка для сайта-->
+        <header id="header">
+            <div class="logo" id="logo">
                 <img src="assets/img/logo/seafood-logo_black.png" alt="Еда морей">
             </div>
             <nav class="nav-display">

@@ -1,6 +1,7 @@
 @import url(variables.css);
 
 :root{
+    --header-margin-top: 0px;
     --header-margin-horizontal: calc((var( --body-container-width) - 100vw) / 2 + 1vw);
     --header-background-img-file: url("../img/header2.jpg");
     --header-background-image-width: 100vw;
@@ -9,38 +10,37 @@
     --header-background-image-scale-y: 100%;
     --header-background-image-position-x: 0%; /*Для широких экранов сдвига изображения нет, на маленьких - около 20%*/
 
+    /*Параметры элементов меню в панели навигации*/
+    --header-nav-padding-vertical: 20px;
+
     /*Параметры логотипа*/
-    
-    --header-logo-height: 40vh;/*calc(var(--header-logo-width) / 3 * 2); */
+    --header-logo-height: 30vh;
     --header-logo-width: calc(var(--header-logo-height) / 2 * 3);
     --header-logo-max-width: 30%;
-    /*--header-logo-scale: 100%;*/
-    --header-logo-left: 3%;
+    --header-logo-top: 30px;
+    --header-logo-left: 1vw;
+
+
+
 }
 
 
 header{
-    /*
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;*/
     background-image: var(--header-background-img-file);
     height: var(--header-background-image-height);
     background-size: var(--header-background-image-scale-x) var(--header-background-image-scale-y);
     background-position: var(--header-background-image-position-x) 0%;
-    margin: 0px var(--header-margin-horizontal);
+    margin: var(--header-margin-top) var(--header-margin-horizontal) var(--header-margin-top) var(--header-margin-horizontal);
 
 }
 
 .logo{
-    position:relative;
-    top: 10px;
-    left: calc( 30% - var(--header-logo-width) / 2 );
+    position:absolute;
+    top: calc(var(--header-margin-top) + 2 * var(--header-nav-padding-vertical) + var(--header-logo-top));
+    left: calc( 50vw - var(--body-container-max-width) / 2 + var(--header-logo-left));
     height: var(--header-logo-height);
     width: var(--header-logo-width);
     /*max-width: var(--header-logo-max-width);*/
-    /*scale: var(--header-logo-scale);*/
-    transform-origin: 0% 0%;
 
     margin-top: 10px;
     margin-left: 3%;
@@ -71,7 +71,7 @@ header nav{
 
 nav a{
     display:inline-block;
-    padding: 20px 20px;
+    padding: var(--header-nav-padding-vertical) 20px;
     letter-spacing: -0.05em;
 }
 
@@ -81,8 +81,6 @@ a {
     text-decoration: none;
     color: black;
 }
-
-
 
 
 @media (max-width: 1200px)
