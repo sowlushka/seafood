@@ -17,7 +17,7 @@
     --header-logo-height: 30vh;
     --header-logo-width: calc(var(--header-logo-height) / 2 * 3);
     --header-logo-max-width: 30%;
-    --header-logo-top: 30px;
+    --header-logo-top: 0px;
     --header-logo-left: 1vw;
 
 

@@ -8,9 +8,6 @@ body {
     align-items: center 
 }
 
-body *{
-    outline: 1px solid blue;
-}
 
 .body-container {
     /*Шрифты для всего проекта*/
