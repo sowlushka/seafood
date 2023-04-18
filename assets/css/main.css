@@ -5,18 +5,20 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center 
+    align-items: center;
+    /*Шрифты для всего проекта*/
+    font-family: 'Roboto', sans-serif;
 }
 
 
-.body-container {
-    /*Шрифты для всего проекта*/
-    font-family: 'Roboto', sans-serif;
+.body-container { 
     max-width: var(--body-container-max-width);
     width: var(--body-container-width);
     min-height: 250vh;
     background-color: #FFFFFF;
-
+    /*Отступы контейнера от края экрана*/
+    margin-left: var(--body-container-margin-horizontal);
+    margin-right: var(--body-container-margin-horizontal);
 }
 
 h1 {
