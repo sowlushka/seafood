@@ -82,6 +82,151 @@ a {
     color: black;
 }
 
+.hambMenu-display{
+    display: none; /*По умолчанию меню скрыто*/
+}
+
+
+
+
+
+
+
+
+
+/**/
+/*---------------------------------------------------
+Стили для работы меню кубика-бургера
+За основу взят пример отсюда: 
+https://codepen.io/erikterwan/pen/EVzeRP
+-----------------------------------------------------*/
+.hambMenu-display label {
+    padding-left: 5px;
+    /*Цвет шрифта рядом с кубиком*/
+    color: #303030;
+}
+
+#menuToggle {
+    display: block;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    /*Цвет шрифта внутри меню*/
+    color: #E0E0E0;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: rgb(200, 200, 200);
+}
+
+
+#menuToggle input {
+    /*Стиль чекбокса в открытом меню*/
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    /*Стиль для горизонтальной линии
+    в картинке для закрытого меню*/
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    position: relative;
+
+    background: #303030;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    /*Цвет крестика*/
+    background: #E0E0E0;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    /*Стиль для раскрытого меню*/
+    position: absolute;
+    width: 150px;/*Ширина блока меню*/
+    margin: -55px 0px 0px -50px;/*Расположение меню по вертикали*/
+    /*Верхний отступ 70px - под палец,
+    чтобы случайно не закрыть*/
+    padding: 70px 45px 20px 10px;
+    /*Цвет фона открытого меню*/
+    background-color: rgba(110, 156, 159, 0.9);
+    /*VS-code подсказал
+    прикольный стиль смешивания из трёх букв*/
+    background-blend-mode: hue;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(150%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    /*Поля элементов меню*/
+    padding: 20px 10px;
+}
+
+#menuToggle ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+
+}
+    /*Конец стилей гамбурге-меню
+    -------------------------------------------------------------------------*/
+
 
 @media (max-width: 1200px)
 {
@@ -109,6 +254,15 @@ a {
 
     .nav-display{
         display:none;
+    }
+
+    .hambMenu-display{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: var(--header-nav-padding-vertical);
+        padding-right: 50px;
+        margin-left: -5px;
     }
 
 }
