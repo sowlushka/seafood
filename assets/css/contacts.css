@@ -11,7 +11,7 @@ p {
 .phone_img {
     width: 65px;
     height: 65px;
-    margin: 0;
+    margin: 0px;
     
 }
 
@@ -26,11 +26,11 @@ a:hover {
     color: #D43721;
 }
 
-.phone {
+.telephone {
     display: flex;
     grid-column: 1/2;
     grid-row: 2/3;
-    margin: 0;
+    margin: 0px;
     
     
 }
