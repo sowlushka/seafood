@@ -76,3 +76,8 @@ a:hover {
     grid-column: 2/3;
     grid-row: 1/2;
 }
+
+.map{
+    width: 100%;
+    height: 50vh;
+}
