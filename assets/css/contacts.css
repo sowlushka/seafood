@@ -4,7 +4,6 @@ h1 {
 }
 
 
-
 p {
     display: block;
     margin: 10px 0 10px 0;
@@ -62,17 +61,3 @@ a:hover {
 }
 
 
-.address, .address1 {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.address {
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-.address1 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
