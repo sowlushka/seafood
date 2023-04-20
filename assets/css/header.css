@@ -21,8 +21,10 @@
     --header-logo-left: 1vw;
 
     /*Параметры бургерного меню*/
-    --hamburg-opened-width: 123px;/*Ширина открытого меню*/
-    --hamburg-shift-to-left: 40px;/*Сдвиг гамбургер меню от правого края влево*/
+    --hamburg-opened-width: calc(var(--screen-mobile-menu-font-size) * 6);/*Ширина открытого меню*/
+    --hamburg-opened-padding-left: 20px;/*Сдвиг подложки открытого меню влево*/
+    --hamburg-closed-shift-to-left: 20px;/*Сдвиг гамбургер меню от правого края влево*/
+    --hamburg-opened-shift-to-left: -20px;/*calc(-6 * var(--screen-mobile-menu-font-size));*/
 
 }
 
@@ -89,9 +91,11 @@ a {
 
     align-items: center;
     justify-content: flex-end;
-    padding: var(--header-nav-padding-vertical);
-    padding-right: 50px;
-    margin-right: var(--hamburg-shift-to-left);
+    padding-top: var(--header-nav-padding-vertical);
+    padding-right: var(--header-nav-padding-horizontal);
+    padding-left: var(--header-margin-horizontal);
+    padding-bottom: var(--header-nav-padding-vertical);
+    margin-right: var(--hamburg-closed-shift-to-left);
 }
 
 
@@ -109,12 +113,12 @@ a {
 https://codepen.io/erikterwan/pen/EVzeRP
 -----------------------------------------------------*/
 .hambMenu-display label {
+    display:inline-block;
     padding-left: 5px;
     color: #303030;/*Цвет шрифта рядом с кубиком*/
     font-size: var(--screen-mobile-menu-font-size);
     font-weight: 500;
     font-style: italic;
-    
 }
 
 .hambMenu-display label:hover{
@@ -207,11 +211,13 @@ https://codepen.io/erikterwan/pen/EVzeRP
 #menu {
     /*Стиль для раскрытого меню*/
     position: absolute;
-    width: calc(var(--hamburg-opened-width) + var(--hamburg-shift-to-left));/*Ширина блока меню*/
-    margin: -55px 0px 0px -20px;/*Расположение меню по вертикали*/
+    width: calc(var(--hamburg-opened-width) + var(---hamburg-opened-padding-left));/*Ширина блока меню*/
+    
+    margin: -55px 0px 0px -10em;/*Расположение развёрнутой панели меню*/
+    margin-right: var(--hamburg-opened-shift-to-left);
     /*Верхний отступ 70px - под палец,
     чтобы случайно не закрыть*/
-    padding: 70px 27px 20px 10px;
+    padding: 70px 27px 20px 1em;
     /*Цвет фона открытого меню*/
     background-color: rgba(230, 230, 230, 0.9);
     /*VS-code подсказал
