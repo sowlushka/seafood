@@ -22,9 +22,7 @@ p {
 a {
     font-style: italic;
 }
-a:hover {
-    color: #D43721;
-}
+
 
 .telephone {
     display: flex;
