@@ -98,6 +98,15 @@ a {
     margin-right: var(--hamburg-closed-shift-to-left);
 }
 
+.header-getprice{
+/*Класс для позиционирования кнопки button-getprice
+на странице заголовка*/ 
+    position: relative;
+    top: 68%;
+    text-align: center;
+    font-size: var(--screen-mobile-menu-font-size);
+}
+
 
 
 
@@ -230,7 +239,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     transform-origin: 0% 0%;
     transform: translate(0, -150%);
 
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
 #menu li {

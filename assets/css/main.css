@@ -30,3 +30,40 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+
+
+/*------Стили кнопки "Получить прайс"--------------------------------------*/
+.button-getprice{
+    display: inline-block;
+    animation: press-me 2s ease 1s infinite;
+}
+
+.button-getprice-core{
+    background-color: #303030;
+    border-radius: 40px;
+    padding: var(--getprice-padding-core-vertical) var(--getprice-padding-core-horizontal);
+    font-size: var(--screen-mobile-menu-font-size);
+    font-weight: 500;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+.button-getprice-core:hover{
+    cursor:pointer;
+}
+
+@keyframes press-me {
+    from {
+        padding: 0px 0px;
+        background-color: rgba(48,48,48,0.6);
+        border-radius: 40px; 
+        margin: 0px 0px;
+    }
+    to {
+        padding: 20px 20px;
+        margin: -20px -20px;
+        background-color: rgba(48,48,48,0);
+        border-radius: 55px;
+    }
+}
+/*--------------------------------------------------------------------*/
