@@ -21,7 +21,7 @@
     --header-logo-left: 1vw;
 
     /*Параметры бургерного меню*/
-    --hamburg-opened-width: 133px;/*Ширина открытого меню*/
+    --hamburg-opened-width: 123px;/*Ширина открытого меню*/
     --hamburg-shift-to-left: 40px;/*Сдвиг гамбургер меню от правого края влево*/
 
 }
@@ -115,6 +115,10 @@ https://codepen.io/erikterwan/pen/EVzeRP
     font-weight: 500;
     font-style: italic;
     
+}
+
+.hambMenu-display label:hover{
+    cursor: pointer;
 }
 
 #menuToggle {
