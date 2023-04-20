@@ -21,10 +21,10 @@
     --header-logo-left: 1vw;
 
     /*Параметры бургерного меню*/
-    --hamburg-opened-width: calc(var(--screen-mobile-menu-font-size) * 6);/*Ширина открытого меню*/
-    --hamburg-opened-padding-left: 20px;/*Сдвиг подложки открытого меню влево*/
+    --hamburg-opened-width: 210px;/*calc(var(--screen-mobile-menu-font-size) * 8);/*Ширина открытого меню*/
+    --hamburg-opened-padding-left: 0px;/*Сдвиг подложки открытого меню влево*/
     --hamburg-closed-shift-to-left: 20px;/*Сдвиг гамбургер меню от правого края влево*/
-    --hamburg-opened-shift-to-left: -20px;/*calc(-6 * var(--screen-mobile-menu-font-size));*/
+    --hamburg-opened-shift-to-left: -196px;
 
 }
 
@@ -88,7 +88,7 @@ a {
 
 .hambMenu-display{
     display: none; /*По умолчанию меню скрыто*/
-
+    /*overflow-x: hidden;*/
     align-items: center;
     justify-content: flex-end;
     padding-top: var(--header-nav-padding-vertical);
@@ -211,10 +211,10 @@ https://codepen.io/erikterwan/pen/EVzeRP
 #menu {
     /*Стиль для раскрытого меню*/
     position: absolute;
-    width: calc(var(--hamburg-opened-width) + var(---hamburg-opened-padding-left));/*Ширина блока меню*/
+    width: calc(var(--hamburg-opened-width) + var(--hamburg-opened-padding-left));/*Ширина блока меню*/
     
-    margin: -55px 0px 0px -10em;/*Расположение развёрнутой панели меню*/
-    margin-right: var(--hamburg-opened-shift-to-left);
+    margin: -55px 0px 0px -150px;/*Расположение развёрнутой панели меню*/
+    margin-left: var(--hamburg-opened-shift-to-left);
     /*Верхний отступ 70px - под палец,
     чтобы случайно не закрыть*/
     padding: 70px 27px 20px 1em;
