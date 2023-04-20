@@ -151,8 +151,9 @@ https://codepen.io/erikterwan/pen/EVzeRP
     transition: color 0.2s ease;
 }
 
+
 #menuToggle a:hover {
-    color: rgb(100, 60, 60);
+    color: #D43721;
 }
 
 
