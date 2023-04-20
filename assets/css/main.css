@@ -31,6 +31,10 @@ h1 {
     letter-spacing: 0.1em;
 }
 
+a:hover {
+    color: #D43721;
+}
+
 
 /*------Стили кнопки "Получить прайс"--------------------------------------*/
 .button-getprice{
@@ -50,6 +54,7 @@ h1 {
 
 .button-getprice-core:hover{
     cursor:pointer;
+    background-color: #44180f;
 }
 
 @keyframes press-me {
