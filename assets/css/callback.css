@@ -85,8 +85,8 @@ h4 {
     left: 0px;
     height: 100vh;
     width: 100vw;
-    background-color: #6E9C9F;
-    opacity: 64%;
+    background-color: #603030;
+    opacity: 25%;
     z-index: var(--z-index-callback-background);
 
 }
@@ -123,7 +123,6 @@ h4 {
     background-color: #FFFFFF;
     border: 1px solid #6E9C9F;
     color: #6E9C9F;
-    font-family: 'Raleway', sans-serif;
     font-size: 15px;
     margin-top: 10px;
 
