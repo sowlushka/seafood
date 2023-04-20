@@ -78,7 +78,7 @@ nav a{
 }
 
 a {
-    font-size: 25px;
+    font-size: var(--screen-calculated-nav-font-size);
     font-weight: 500;
     text-decoration: none;
     color: black;
@@ -86,6 +86,12 @@ a {
 
 .hambMenu-display{
     display: none; /*По умолчанию меню скрыто*/
+
+    align-items: center;
+    justify-content: flex-end;
+    padding: var(--header-nav-padding-vertical);
+    padding-right: 50px;
+    margin-right: var(--hamburg-shift-to-left);
 }
 
 
@@ -266,14 +272,21 @@ https://codepen.io/erikterwan/pen/EVzeRP
 
     .hambMenu-display{
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding: var(--header-nav-padding-vertical);
-        padding-right: 50px;
-        margin-right: var(--hamburg-shift-to-left);
-        /*margin-left: -5px;*/
     }
 
 }
 
+
+@media (max-width: 800px){
+
+    .nav-display{
+        display:none;
+    }
+
+    .hambMenu-display{
+        display: flex;
+    }
+
+
+}
 
