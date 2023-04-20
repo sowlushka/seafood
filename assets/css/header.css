@@ -20,7 +20,9 @@
     --header-logo-top: 0px;
     --header-logo-left: 1vw;
 
-
+    /*Параметры бургерного меню*/
+    --hamburg-opened-width: 133px;/*Ширина открытого меню*/
+    --hamburg-shift-to-left: 40px;/*Сдвиг гамбургер меню от правого края влево*/
 
 }
 
@@ -102,12 +104,16 @@ https://codepen.io/erikterwan/pen/EVzeRP
 -----------------------------------------------------*/
 .hambMenu-display label {
     padding-left: 5px;
-    /*Цвет шрифта рядом с кубиком*/
-    color: #303030;
+    color: #303030;/*Цвет шрифта рядом с кубиком*/
+    font-size: var(--screen-mobile-menu-font-size);
+    font-weight: 500;
+    font-style: italic;
+    
 }
 
 #menuToggle {
     display: block;
+    position: relative;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -116,12 +122,14 @@ https://codepen.io/erikterwan/pen/EVzeRP
 #menuToggle a {
     text-decoration: none;
     /*Цвет шрифта внутри меню*/
-    color: #E0E0E0;
-    transition: color 0.3s ease;
+    color: #303030;
+    font-size: var(--screen-mobile-menu-font-size);
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 #menuToggle a:hover {
-    color: rgb(200, 200, 200);
+    color: rgb(100, 60, 60);
 }
 
 
@@ -174,7 +182,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     /*Цвет крестика*/
-    background: #E0E0E0;
+    background: #303030;
 }
 
 #menuToggle input:checked~span:nth-last-child(3) {
@@ -189,13 +197,13 @@ https://codepen.io/erikterwan/pen/EVzeRP
 #menu {
     /*Стиль для раскрытого меню*/
     position: absolute;
-    width: 150px;/*Ширина блока меню*/
-    margin: -55px 0px 0px -50px;/*Расположение меню по вертикали*/
+    width: calc(var(--hamburg-opened-width) + var(--hamburg-shift-to-left));/*Ширина блока меню*/
+    margin: -55px 0px 0px -20px;/*Расположение меню по вертикали*/
     /*Верхний отступ 70px - под палец,
     чтобы случайно не закрыть*/
-    padding: 70px 45px 20px 10px;
+    padding: 70px 27px 20px 10px;
     /*Цвет фона открытого меню*/
-    background-color: rgba(110, 156, 159, 0.9);
+    background-color: rgba(230, 230, 230, 0.9);
     /*VS-code подсказал
     прикольный стиль смешивания из трёх букв*/
     background-blend-mode: hue;
@@ -204,7 +212,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     /* to stop flickering of text in safari */
 
     transform-origin: 0% 0%;
-    transform: translate(150%, 0);
+    transform: translate(0, -150%);
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
@@ -262,7 +270,8 @@ https://codepen.io/erikterwan/pen/EVzeRP
         justify-content: flex-end;
         padding: var(--header-nav-padding-vertical);
         padding-right: 50px;
-        margin-left: -5px;
+        margin-right: var(--hamburg-shift-to-left);
+        /*margin-left: -5px;*/
     }
 
 }
