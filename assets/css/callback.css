@@ -3,6 +3,11 @@
     --z-index-form-callback: 13;
     --form-callback-width: 300px;
     --form-callback-height: 370px;
+    --form-callback-padding-horizontal: 25px;
+    --form-callback-padding-vertical: 25px;
+    --form-callback-buttn-close-size: 30px;
+    --form-callback-font-size: 20px;
+
     --z-index-return-call-background: 12;
     --z-index-form-return-call: 13;
     --form-return-call-width: 350px;
@@ -13,38 +18,41 @@
     display: none;
     position: fixed;
     z-index: var(--z-index-form-callback);
-    width: var(--form-callback-width);
+    max-width: var(--form-callback-width);
     height: var(--form-callback-height);
     top: calc(50vh - (var(--form-callback-height) / 2));
-    left: calc(50vw - (var(--form-callback-width) / 2));
+    /*left: calc(50vw - (var(--form-callback-width) / 2));*/
     border: 1px solid #000000;
     text-align: center;
     background-color: #FFFFFF;
-
+    padding: var(--form-callback-padding-vertical) var(--form-callback-padding-horizontal);
+    font-style: italic;
 }
 
 h4 {
-    margin: 50px 0 40px 0;
+    margin: 0px 0 20px 0;
+    letter-spacing: 0.01em;
+    font-size: var(--form-callback-font-size);
+    line-height: calc(var(--form-callback-font-size) + .3em);
 
 }
 
-#form-callback input {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border: none;
-    border-bottom: 1.5px solid #000000;
-    padding: 10px 0 10px 0;
-}
-
-::placeholder {
-    font-size: 14px;
-}
 
 .contact-info {
-
-    padding: 0 45px 0 45px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.form-callback-messenger{
+    width: 66px;
+    height: 66px;
+}
+
+.form-callback-messenger img{
+    width: 100%;
+    height: 100%;
+}
+
 
 .send1 {
     width: 210px;
@@ -66,11 +74,14 @@ h4 {
     position: relative;
     /*Сдвигаем слева направо относительно исходной позиции
     на половину ширины формы за вычетом отступа от края и ширины крестика*/
-    left: calc(var(--form-callback-width) / 2 - 25px);
+    left: calc(var(--form-callback-width) / 2 - var(--form-callback-padding-horizontal) - 10px);
+    top: -0.5em;
     border: none;
     background: none;
-    opacity: 0.7;
     font-size: 30px;
+    text-decoration: none;
+    color: #303030;
+    font-style: normal;
 }
 
 #btn-close:hover {
@@ -85,8 +96,8 @@ h4 {
     left: 0px;
     height: 100vh;
     width: 100vw;
-    background-color: #603030;
-    opacity: 25%;
+    background-color: #44180f;
+    opacity: 65%;
     z-index: var(--z-index-callback-background);
 
 }
