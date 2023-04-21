@@ -8,23 +8,19 @@
 
 footer {
     background-color: #322C2C;
-    width: 100%;
-    /*
-    margin-left: var(--header-margin-horizontal);
-    margin-right: var(--header-margin-horizontal);
-    */
+    width: 100vw;
     height: 350px;
 }
 
 .container-footer {
     max-width: 100%;
-    width: 100%;
-    padding: 0 151px 0 133px;
+    padding: 0px 5vw;
     margin: 0 auto;
 }
 
 .footer-upperside {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -32,7 +28,7 @@ footer {
 .logo-img {
     display: block;
     width: 300px;
-    height: 300px;
+    height: 150px;
 }
 
 .footer-list {
@@ -40,15 +36,20 @@ footer {
     justify-content: space-between;
 }
 
+/*
 .footer-item:not(:first-child) {
     margin-left: 35px
-}
+}*/
 
 .footer-item {
     color: #ffff;
-    font-size: 34px;
+    font-size: 25px;
+    padding-left: 17px;
+    padding-right:17px;
     list-style: none;
     font-style: italic;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
 .phone {
