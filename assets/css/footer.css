@@ -2,10 +2,6 @@
 @import url(variables.css);
 
 
-:root {
-    --footer-margin-horizontal: calc((var(--body-container-width) - 100vw) / 2 + 1vw);
-}
-
 footer {
     background-color: #322C2C;
 }
