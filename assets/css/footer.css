@@ -8,14 +8,22 @@
 
 footer {
     background-color: #322C2C;
+    width: 100%;
+    /*
+    margin-left: var(--header-margin-horizontal);
+    margin-right: var(--header-margin-horizontal);
+    */
+
 }
 
 .footer__container {
     padding: 30px 100px;
     margin: 0 auto;
     max-width: 100%;
-}
+    color: white;
+    font-size: 18px;
 
+}
 
 .footer__wrapper {
     display: flex;
