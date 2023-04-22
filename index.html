@@ -26,19 +26,19 @@
 
     <meta
         description="Морепродукты Дальнего Востока: собственная переработка в Москве, логистика по всей России. Пакет документов 'Меркурий'.">
-    <!--Слайдер: https://itchief.ru/javascript/slider -->
-
-    <script defer src="assets/js/itc-slider.js"></script><!--Слайдер-->
-    <script defer src="assets/js/header.js?ver=2"></script>
-    <script defer src="assets/js/callback.js?ver=2"></script>
+    <script defer src="assets/js/main.js?ver=3"></script>
+    <script defer src="assets/js/itc-slider.js"></script><!--Слайдер https://itchief.ru/javascript/slider-->
+    <script defer src="assets/js/header.js?ver=3"></script>
+    <script defer src="assets/js/callback.js?ver=3"></script>
+  
 
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/main.css?ver=2">
-    <link rel="stylesheet" href="assets/css/header.css?ver=2">
-    <link rel="stylesheet" href="assets/css/callback.css?ver=2"><!--Стили для формы обратного звонка-->
-    <link rel="stylesheet" href="assets/css/itc-slider.css?ver=2"><!--Слайдер-->
-    <link rel="stylesheet" href="assets/css/contacts.css?ver=2">
-    <link rel="stylesheet" href="assets/css/footer.css?ver=2">
+    <link rel="stylesheet" href="assets/css/main.css?ver=3">
+    <link rel="stylesheet" href="assets/css/header.css?ver=3">
+    <link rel="stylesheet" href="assets/css/callback.css?ver=3"><!--Стили для формы обратного звонка-->
+    <link rel="stylesheet" href="assets/css/itc-slider.css"><!--Слайдер-->
+    <link rel="stylesheet" href="assets/css/contacts.css?ver=3">
+    <link rel="stylesheet" href="assets/css/footer.css?ver=3">
     <title>Еда морей</title>
 
 </head>
@@ -197,17 +197,35 @@
     </div>
     <form id="form-callback">
         <a id="btn-close" href="#">x</a>
-        <h4>Выберите мессенджер <br>для получения прайса</h4>
+        <h4>Выберите приложение, <br>чтобы запросить прайс</h4>
         <div class="contact-info">
             <div class="form-callback-messenger">
-                <a href="https://wa.me/79241178924?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%0A%D0%92%D1%8B%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BF%D1%80%D0%B0%D0%B9%D1%81%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D1%8E%20%22%D0%95%D0%B4%D0%B0%20%D0%9C%D0%BE%D1%80%D0%B5%D0%B9%22">
+                <a href="https://wa.me/79241178924?text=$priceMessText" target="_blank">
                     <img src="assets/img/whatsapp.png" alt="WhatsApp">
                 </a>
             </div>
+
+            <div class="form-callback-messenger">
+                <a href="tg://resolve?domain=bogdanov_da" target="_blank">
+                    <img src="assets/img/telegram.png" alt="Telegram">
+                </a>
+            </div>
+
+            <div class="form-callback-messenger">
+                <a href="viber://chat?number=%2B79241178924" target="_blank">
+                    <img src="assets/img/viber.png" alt="Viber">
+                </a>
+            </div>
+
+            <div class="form-callback-messenger">
+                <a href="tel:+79241178924" target="_blank">
+                    <img src="assets/img/phone-appl.png" alt="Телефон">
+                </a>
+            </div>
         </div>
-        <!--
-        <button type="submit" id="callback-submit" class="send1">Заказать звонок</button>
-        -->
+
+
+
     </form>
 
 

@@ -1,7 +1,7 @@
 :root {
     --z-index-callback-background: 12;
     --z-index-form-callback: 13;
-    --form-callback-width: 300px;
+    --form-callback-width: 250px;
     --form-callback-height: 370px;
     --form-callback-padding-horizontal: 25px;
     --form-callback-padding-vertical: 25px;
@@ -18,7 +18,7 @@
     display: none;
     position: fixed;
     z-index: var(--z-index-form-callback);
-    max-width: var(--form-callback-width);
+    width: var(--form-callback-width);
     height: var(--form-callback-height);
     top: calc(50vh - (var(--form-callback-height) / 2));
     /*left: calc(50vw - (var(--form-callback-width) / 2));*/
@@ -34,13 +34,17 @@ h4 {
     letter-spacing: 0.01em;
     font-size: var(--form-callback-font-size);
     line-height: calc(var(--form-callback-font-size) + .3em);
-
+    justify-self: flex-start;
 }
 
 
 .contact-info {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-content: space-evenly;
+    justify-content: space-around;
 }
 
 .form-callback-messenger{
@@ -82,6 +86,7 @@ h4 {
     text-decoration: none;
     color: #303030;
     font-style: normal;
+    justify-self: flex-start;
 }
 
 #btn-close:hover {
@@ -104,7 +109,8 @@ h4 {
 
 .background-display {
     /*Стиль, создающий модальное окно*/
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
 }
 
 #form-callback input:invalid {
