@@ -78,7 +78,7 @@ h4 {
     position: relative;
     /*Сдвигаем слева направо относительно исходной позиции
     на половину ширины формы за вычетом отступа от края и ширины крестика*/
-    left: calc(var(--form-callback-width) / 2 - var(--form-callback-padding-horizontal) - 10px);
+    left: calc(var(--form-callback-width) / 2 - var(--form-callback-padding-horizontal) + 1em);
     top: -0.5em;
     border: none;
     background: none;
