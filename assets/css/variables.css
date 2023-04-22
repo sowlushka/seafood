@@ -4,4 +4,14 @@
     --body-container-width: 85vw;/*Ширина контейнера, в котором размещается контент*/
     --body-container-max-width: 1300px; /*Максимальная ширина контента, выше которой расширение страницы недопустимо. Скриптом предусмотрены ТОЛЬКО px*/
     --body-container-margin-horizontal: 10px;/*Ширина левого/правого отступа от края экрана*/
+
+    
+    --screen-calculated-nav-font-size:calc(0.011 * var(--body-container-width) + 10.7px);/*Значение управляется скриптом*/
+    --screen-mobile-menu-font-size: calc(var(--screen-calculated-nav-font-size) + 2px);/*Размер шрифта для меню мобильного экрана*/
+    
+    
+    /*Стили кнопки "Получить прайс*/
+    --getprice-padding-core-vertical: calc(1.1 * var(--screen-mobile-menu-font-size));/*Оступы для внутреннего элемента*/
+    --getprice-padding-core-horizontal: calc(2.5 * var(--screen-mobile-menu-font-size));/*Отступы для внутреннего элемента*/
+
 }
