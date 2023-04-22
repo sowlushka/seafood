@@ -75,7 +75,7 @@ header nav{
 
 nav a{
     display:inline-block;
-    padding: var(--header-nav-padding-vertical) 20px;
+    padding: var(--header-nav-padding-vertical) 4vw;
     letter-spacing: -0.05em;
     font-size: var(--screen-calculated-nav-font-size);
     font-weight: 500;
