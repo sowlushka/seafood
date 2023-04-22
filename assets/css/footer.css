@@ -2,8 +2,8 @@
 @import url(variables.css);
 
 
-:root{
-    --footer-margin-horizontal: calc((var( --body-container-width) - 100vw) / 2 + 1vw);
+:root {
+    --footer-margin-horizontal: calc((var(--body-container-width) - 100vw) / 2 + 1vw);
 }
 
 footer {
@@ -13,56 +13,70 @@ footer {
     margin-left: var(--header-margin-horizontal);
     margin-right: var(--header-margin-horizontal);
     */
-    height: 350px;
+
 }
 
-.container-footer {
-    max-width: 100%;
-    width: 100%;
-    padding: 0 151px 0 133px;
+.footer__container {
+    padding: 30px 100px;
     margin: 0 auto;
-}
-
-.footer-upperside {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-img {
-    display: block;
-    width: 300px;
-    height: 300px;
-}
-
-.footer-list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-item:not(:first-child) {
-    margin-left: 35px
-}
-
-.footer-item {
-    color: #ffff;
-    font-size: 34px;
-    list-style: none;
-    font-style: italic;
-}
-
-.phone {
-    margin-left: 35px;
-    background-color: white;
-    color: black;
-    font-size: large;
-    font-style: italic;
-    border-radius: 15px;
-}
-
-.footer-down {
+    max-width: 100%;
     color: white;
-    text-align: center;
-    font-style: italic;
-    font-size: 26px;
+    font-size: 18px;
+
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+.left__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.rigth__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.left__item {
+    position: relative;
+}
+
+.left__item::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    left: -45px;
+    top: 0;
+}
+
+.left__item-msk::before {
+    background-image: url('../img/location2.png');
+
+}
+
+.left__item-call::before {
+    background-image: url('../img/phone.png');
+
+}
+
+.left__item-mail::before {
+    background-image: url('../img/email.png');
+
+}
+
+.footer__rights {
+    display: flex;
+    font-size: smaller;
+    justify-content: center;
 }
