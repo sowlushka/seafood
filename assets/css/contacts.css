@@ -93,7 +93,7 @@ a {
     }
 }
 
-@media screen  and (max-width: 480px){
+@media screen  and (max-width: 560px){
     h1 {
         font-size: 40px;
         margin-bottom: 30px;
