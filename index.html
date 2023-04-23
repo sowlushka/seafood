@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<!--Примерный макет: https://gribochek.weblium.site/  -->
+<!--Примерный макет: https://gribochek.weblium.site/  
+Макет Figma: https://www.figma.com/file/9KiT6xOvDLcQp1nGejJ2gh/Untitled?node-id=1-3&t=ws4KuHAzROpwBoiz-0
+-->
+
 
 <head>
     <meta charset="UTF-8">
@@ -23,19 +26,23 @@
 
     <meta
         description="Морепродукты Дальнего Востока: собственная переработка в Москве, логистика по всей России. Пакет документов 'Меркурий'.">
-    <!--Слайдер: https://itchief.ru/javascript/slider -->
-
-    <script defer src="assets/js/itc-slider.js"></script><!--Слайдер-->
-    <script defer src="assets/js/header.js?ver=2"></script>
-    <script defer src="assets/js/callback.js?ver=2"></script>
+    
+    <script defer src="assets/js/main.js?ver=3"></script>
+    <script defer src="assets/js/itc-slider.js"></script><!--Слайдер https://itchief.ru/javascript/slider-->
+    <script defer src="assets/js/header.js?ver=3"></script>
+    <script defer src="assets/js/callback.js?ver=3"></script>
+    
 
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/main.css?ver=2">
-    <link rel="stylesheet" href="assets/css/header.css?ver=2">
-    <link rel="stylesheet" href="assets/css/callback.css?ver=2"><!--Стили для формы обратного звонка-->
-    <link rel="stylesheet" href="assets/css/itc-slider.css?ver=2"><!--Слайдер-->
-    <link rel="stylesheet" href="assets/css/contacts.css?ver=2">
-    <link rel="stylesheet" href="assets/css/footer.css?ver=2">
+    <link rel="stylesheet" href="assets/css/main.css?ver=5">
+    <link rel="stylesheet" href="assets/css/header.css?ver=5">
+
+    <link rel="stylesheet" href="assets/css/callback.css?ver=5"><!--Стили для формы обратного звонка-->
+    <link rel="stylesheet" href="assets/css/itc-slider.css"><!--Слайдер-->
+    
+    <link rel="stylesheet" href="assets/css/contacts.css?ver=5">
+    <link rel="stylesheet" href="assets/css/about.css?ver=5">
+    <link rel="stylesheet" href="assets/css/footer.css?ver=5">
     <title>Еда морей</title>
 
 </head>
@@ -47,7 +54,7 @@
                 <img src="assets/img/logo/seafood-logo_black.png" alt="Еда морей">
             </div>
             <nav class="nav-display">
-                
+
                 <a href="#">
                     <div>
                         Преимущества
@@ -64,26 +71,26 @@
                     </div>
                 </a>
             </nav>
-            
+
             <!--Меню для маленьких экранов-->
             <div class="hambMenu-display" role="navigation">
                 <label for="hambMenu">Меню</label>
                 <div id="menuToggle">
 
-                    
-                    
+
+
                     <input type="checkbox" id="hambMenu">
                     <span></span><!--Этот спан будет отображаться в виде линеечки в кубике-->
                     <span></span>
                     <span></span>
-                    
+
                     <ul id="menu">
                         <li><a href="#">Преимущества</a></li>
                         <li><a href="#">Продукция</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
-                
+
             </div>
 
             <div class="header-getprice">
@@ -112,7 +119,13 @@
 
 
         <!--О нас-->
-
+        <div class="about-section">
+            <h1>О НАС</h1>
+            <div class="company-description">
+                <p>Компания "Еда Морей" занимается прямыми поставками морепродуктов с Дальнего Востока, а также их последующей реализацией крупным и мелким оптом по всей России. Кроме того, мы осуществляем вторичную переработку крабовой продукции на собственном
+                    отестованном цеху в городе Москва. Сотрудничая с нами, вы всегда можете быть уверены в качестве товара, и надежности как поставщика.</p>
+            </div>
+        </div>
 
 
 
@@ -120,14 +133,16 @@
 
         <!--Контакты-->
         <h1>контакты</h1>
+        
         <div class="map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c0016abeafff3cd20067c42e5c123c1e53a4db19bf99a8bdd01d797450fa07c&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c0016abeafff3cd20067c42e5c123c1e53a4db19bf99a8bdd01d797450fa07c&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="contact_ways">
             <div class="address1">
                 <p>г. Москва,</p>
-                <p>ул. Средняя  Калитниковская 27</p>
+                <p>ул. Средняя Калитниковская 27</p>
             </div>
             <div class="address2">
                 <p>г. Домодедово,</p>
@@ -146,41 +161,40 @@
                     <img src="assets/img/email.png" alt="#">
                 </div>
                 <div class="post">
-                    <a href="e-mail">edamorei@mail</a>
+                    <a href="e-mail">edamorei@mail.ru</a>
                 </div>
             </div>
         </div>
+
 
 
     </div>
-    
-    <footer>
-        <div class="container-footer">
-            <div class="footer-upperside">
-                <a href="#" class="logo-footer">
-                    <img src="assets/img/logo/seafood-logo_black.png" alt="Логотип сайта" class="logo-img">
-                </a>
-                <div class="footer-list">
-                    <div class="footer-item">
-                        Доставка
-                    </div>
-                    <div class="footer-item">
-                        O нас
-                    </div>
-                    <div class="footer-item">
-                        Сделать заказ
-                    </div>
-                    <div><button class="phone">+79241178924</button></div>
-                </div>
-            </div>
 
-            <div class="footer-down">
-                Все права защищены,2023
-            </div>
+
+<footer>
+    <div class="footer__container">
+        <div class="footer__wrapper">
+            <ul class="footer__content-left">
+                <li class="left__item left__item-msk">
+                    г. Москва, Средняя Калитниковская улица 27</li>
+                <li class="left__item left__item-call">
+                    +7 (924) 1178-924</li>
+                <li class="left__item left__item-mail">
+                    edamorei@mail.ru</li>
+            </ul>
+
+            <ul class="footer__content-right">
+                <li class="rigth__item">Продукция</li>
+                <li class="rigth__item">Преимущества</li>
+                <li class="rigth__item">О нас</li>
+            </ul>
 
         </div>
-   </footer>
-
+        <div class="footer__rights">
+            Designed by ITGirls © 2023 All rights reserved
+        </div>
+    </div>
+</footer>
 
 
 
@@ -191,17 +205,51 @@
     </div>
     <form id="form-callback">
         <a id="btn-close" href="#">x</a>
-        <h4>Заказать обратный звонок</h4>
+        <h4>Выберите приложение, <br>чтобы запросить прайс</h4>
         <div class="contact-info">
-            <input type="text" id="contact_name" name="contact_name" placeholder="Имя">
-            <input type="tel" id="callback-phone" name="phone" placeholder="Телефон: +74958235412" required>
-        </div>
-        <button type="submit" id="callback-submit" class="send1">Заказать звонок</button>
-    </form>
 
-    <form id="return-call">
-        <h4>Отлично! Мы скоро вам перезвоним</h4>
-        <button type="submit" id="return-call-submit" class="send2">Закрыть</button>
+            <div class="form-callback-messenger">
+            </div>
+
+            <div class="form-callback-messenger">
+                <a href="tel:+79241178924" target="_blank">
+                    <img src="assets/img/phone-appl.png" alt="Телефон">
+                </a>
+            </div>
+
+            <div class="form-callback-messenger">
+            </div>
+
+            <div class="form-callback-messenger">
+                <a href="tg://resolve?domain=bogdanov_da" target="_blank">
+                    <img src="assets/img/telegram.png" alt="Telegram">
+                </a>
+            </div>
+
+            <div class="form-callback-messenger">
+                <a href="https://wa.me/79241178924?text=$priceMessText" target="_blank">
+                    <img src="assets/img/whatsapp.png" alt="WhatsApp">
+                </a>
+            </div>
+
+            <div class="form-callback-messenger">
+                <a href="viber://chat?number=%2B79241178924" target="_blank">
+                    <img src="assets/img/viber.png" alt="Viber">
+                </a>
+            </div>
+
+            <div class="form-callback-messenger">
+            </div>
+            
+            <div class="form-callback-messenger">
+                <a href="sms:+79241178924" target="_blank">
+                    <img src="assets/img/sms-appl.png" alt="Телефон">
+                </a>
+            </div>
+            
+            <div class="form-callback-messenger">
+            </div>
+        </div>
     </form>
     <!--Конец блока кода получения обратного звонка-->
 
