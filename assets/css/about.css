@@ -1,0 +1,10 @@
+@import url(variables.css);
+
+.about-section{
+    margin: 100px 0px;
+}
+
+
+.company-description {
+    font-size: var(--screen-calculated-aabout-font-size);
+}

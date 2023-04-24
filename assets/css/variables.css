@@ -6,12 +6,15 @@
     --body-container-margin-horizontal: 10px;/*Ширина левого/правого отступа от края экрана*/
 
     
-    --screen-calculated-nav-font-size:calc(0.011 * var(--body-container-width) + 10.7px);/*Значение управляется скриптом*/
+    /*Размеры шрифтов для меню "Навигация"*/
+    --screen-calculated-nav-font-size:calc(0.011 * var(--body-container-width) + 10.7px);
     --screen-mobile-menu-font-size: calc(var(--screen-calculated-nav-font-size) + 2px);/*Размер шрифта для меню мобильного экрана*/
     
+
+    /*Размеры шрифтов для блока О нас*/
+    --screen-calculated-aabout-font-size:calc(0.006 * var(--body-container-width) + 16.2px);
     
     /*Стили кнопки "Получить прайс*/
     --getprice-padding-core-vertical: calc(1.1 * var(--screen-mobile-menu-font-size));/*Оступы для внутреннего элемента*/
     --getprice-padding-core-horizontal: calc(2.5 * var(--screen-mobile-menu-font-size));/*Отступы для внутреннего элемента*/
-
 }
