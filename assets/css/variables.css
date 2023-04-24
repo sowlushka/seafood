@@ -12,12 +12,9 @@
     
 
     /*Размеры шрифтов для блока О нас*/
-    --screen-calculated-aabout-font-size:calc(0.006 * var(--body-container-width) + 16.2px);/*Значение управляется скриптом*/
+    --screen-calculated-aabout-font-size:calc(0.006 * var(--body-container-width) + 16.2px);
     
     /*Стили кнопки "Получить прайс*/
     --getprice-padding-core-vertical: calc(1.1 * var(--screen-mobile-menu-font-size));/*Оступы для внутреннего элемента*/
     --getprice-padding-core-horizontal: calc(2.5 * var(--screen-mobile-menu-font-size));/*Отступы для внутреннего элемента*/
-
-
-
 }
