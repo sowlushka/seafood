@@ -1,0 +1,82 @@
+/*Стили футера*/
+@import url(variables.css);
+
+
+:root {
+    --footer-margin-horizontal: calc((var(--body-container-width) - 100vw) / 2 + 1vw);
+}
+
+footer {
+    background-color: #322C2C;
+    width: 100%;
+    /*
+    margin-left: var(--header-margin-horizontal);
+    margin-right: var(--header-margin-horizontal);
+    */
+
+}
+
+.footer__container {
+    padding: 30px 100px;
+    margin: 0 auto;
+    max-width: 100%;
+    color: white;
+    font-size: 18px;
+
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+.left__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.rigth__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.left__item {
+    position: relative;
+}
+
+.left__item::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    left: -45px;
+    top: 0;
+}
+
+.left__item-msk::before {
+    background-image: url('../img/location2.png');
+
+}
+
+.left__item-call::before {
+    background-image: url('../img/phone.png');
+
+}
+
+.left__item-mail::before {
+    background-image: url('../img/email.png');
+
+}
+
+.footer__rights {
+    display: flex;
+    font-size: smaller;
+    justify-content: center;
+}
