@@ -1,436 +1,467 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<!--Примерный макет: https://gribochek.weblium.site/  
+  <!--Примерный макет: https://gribochek.weblium.site/  
 Макет Figma: https://www.figma.com/file/9KiT6xOvDLcQp1nGejJ2gh/Untitled?node-id=1-3
 -->
 
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
     <!--favicon
-        подключение иконок описано тут: https://www.ashmanov.com/education/articles/favikon-dlya-sajta/
+        подключение иконок описано тут: https://www.ashmanov.com/education/articles/favikon-dlya-sajta/  
     -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png" >
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="assets/favicon/site.webmanifest" >
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg"  color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c" >
+    <meta name="theme-color" content="#ffffff" >
 
     <meta
-        description="Морепродукты Дальнего Востока: собственная переработка в Москве, логистика по всей России. Пакет документов 'Меркурий'.">
-    
+      description="Морепродукты Дальнего Востока: собственная переработка в Москве, логистика по всей России. Пакет документов 'Меркурий'.">
+
     <script defer src="assets/js/main.js?ver=3"></script>
     <script defer src="assets/js/itc-slider.js"></script><!--Слайдер https://itchief.ru/javascript/slider -->
     <script defer src="assets/js/header.js?ver=3"></script>
     <script defer src="assets/js/callback.js?ver=3"></script>
-    
 
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/main.css?ver=6">
-    <link rel="stylesheet" href="assets/css/header.css?ver=6">
-
+    <link rel="stylesheet" href="assets/css/normalize.css" >
+    <link rel="stylesheet" href="assets/css/main.css?ver=6" >
+    <link rel="stylesheet" href="assets/css/header.css?ver=6" >
     <link rel="stylesheet" href="assets/css/callback.css?ver=6"><!--Стили для формы обратного звонка-->
-    <link rel="stylesheet" href="assets/css/itc-slider.css"><!--Слайдер-->
-    <link rel="stylesheet" href="assets/css/production.css">
-    <link rel="stylesheet" href="assets/css/contacts.css?ver=6">
-    <link rel="stylesheet" href="assets/css/about.css?ver=6">
-    <link rel="stylesheet" href="assets/css/footer.css?ver=6">
+    <link rel="stylesheet" href="assets/css/itc-slider.css" ><!--Слайдер-->
+    <link rel="stylesheet" href="assets/css/advantages.css" >
+    <link rel="stylesheet" href="assets/css/production.css" >
+    <link rel="stylesheet" href="assets/css/contacts.css?ver=6" >
+    <link rel="stylesheet" href="assets/css/about.css?ver=6" >
+    <link rel="stylesheet" href="assets/css/footer.css?ver=6" >
     <title>Еда морей</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="body-container"><!--Обёртка для сайта-->
-        <header id="header">
-            <div class="logo" id="logo">
-                <img src="assets/img/logo/seafood-logo_black.png" alt="Еда морей">
-            </div>
-            <nav class="nav-display">
+      
+      <header id="header">
+        <div class="logo" id="logo">
+          <img src="assets/img/logo/seafood-logo_black.png" alt="Еда морей" >
+        </div>
+        <nav class="nav-display">
+          <a href="#">
+            <div>Преимущества</div>
+          </a>
+          <a href="#">
+            <div>Продукция</div>
+          </a>
+          <a href="#">
+            <div>Контакты</div>
+          </a>
+        </nav>
 
-                <a href="#">
+        <!--Меню для маленьких экранов-->
+        <div class="hambMenu-display" role="navigation">
+          <label for="hambMenu">Меню</label>
+          <div id="menuToggle">
+            <input type="checkbox" id="hambMenu" >
+            <span></span><!--Этот спан будет отображаться в виде линеечки в кубике-->
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+              <li><a href="#">Преимущества</a></li>
+              <li><a href="#">Продукция</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-getprice">
+          <div class="button-getprice">
+            <div class="button-getprice-core" onclick="showCallbackForm();">
+              Получить прайс
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--ПРЕИМУЩЕСТВА-->
+      <div class="advantages-container">
+        <h1>НАШИ ПРЕИМУЩЕСТВА</h1>
+        <div class="advantages-container-items">
+          <div class="advantages-container-item">
+            <div class="advantages-container-item-header">
+              <img src="assets/img/email.png" alt="Цена" >
+              <h3>Цена</h3>
+            </div>
+            <div class="advantages-container-item-info">
+              Мы не закупаем сырьё и готовую продукцию у различных посредников,
+              всегда работаем только непосредственно с добытчиками
+              морепродуктов, поэтому часто можем дать цену уже в Москве даже
+              более низкую, чем предлагают конкуренты на Дальнем Востоке.
+            </div>
+          </div>
+          <div class="advantages-container-item">
+            <div class="advantages-container-item-header">
+              <img src="assets/img/email.png" alt="Цена" >
+              <h3>Качество</h3>
+            </div>
+            <div class="advantages-container-item-info">
+              Качеству уделяется отдельное внимание, и именно поэтому мы
+              запустили собственный цех по переработке, разделке краба в Москве,
+              для осуществления полного контроля качества реализуемой продукции.
+            </div>
+          </div>
+
+          <div class="advantages-container-item">
+            <div class="advantages-container-item-header">
+              <img src="assets/img/email.png" alt="Цена" >
+              <h3>Логистика</h3>
+            </div>
+            <div class="advantages-container-item-info">
+              Имея многолетний опыт отправки морепродуктов по всей Росии, мы
+              отфильтровали множество частных перевозчиков и транспортных служб
+              по тарифам и надёжности, для более быстрой, качественной и
+              выгодной транспортировки по РФ и некоторых стран СНГ.
+            </div>
+          </div>
+          <div class="advantages-container-item">
+            <div class="advantages-container-item-header">
+              <img src="assets/img/email.png" alt="Цена" >
+              <h3>Документы</h3>
+            </div>
+            <div class="advantages-container-item-info">
+              Предоставляем пакет документов "Меркурий", а также другие
+              необходимые сопроводительные документы на продукцию. Возможность
+              работы как за наличный, так и по безналичному расчёту.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Продукция-->
+      <div class="production">
+        <h1>Продукция</h1>
+        <div
+          class="itc-slider"
+          data-slider="itc-slider"
+          data-autoplay="false"
+          data-interval="7000"
+        >
+          <div class="itc-slider__wrapper">
+            <div class="itc-slider__items">
+              <div class="itc-slider__item">
+                <!-- Контент 1 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-01.jpg"
+                      alt="Продукт 1"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-1</h4>
                     <div>
-                        Преимущества
+                      Данный продукт отличается изысканным вкусом и тает во рту
                     </div>
-                </a>
-                <a href="#">
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 2 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-02.jpg"
+                      alt="Продукт 2"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-2</h4>
                     <div>
-                        Продукция
+                      Данный продукт отличается изысканным вкусом и тает во рту
                     </div>
-                </a>
-                <a href="#">
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 3 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-03.jpg"
+                      alt="Продукт 3"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-3</h4>
                     <div>
-                        Контакты
+                      Данный продукт отличается изысканным вкусом и тает во рту
                     </div>
-                </a>
-            </nav>
-
-            <!--Меню для маленьких экранов-->
-            <div class="hambMenu-display" role="navigation">
-                <label for="hambMenu">Меню</label>
-                <div id="menuToggle">
-
-
-
-                    <input type="checkbox" id="hambMenu">
-                    <span></span><!--Этот спан будет отображаться в виде линеечки в кубике-->
-                    <span></span>
-                    <span></span>
-
-                    <ul id="menu">
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Продукция</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
+                  </div>
                 </div>
-
-            </div>
-
-            <div class="header-getprice">
-                <div class="button-getprice">
-                    <div class="button-getprice-core" onclick="showCallbackForm();">
-                        Получить прайс
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 4 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-04.jpg"
+                      alt="Продукт 4"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-4</h4>
+                    <div>
+                      Данный продукт отличается изысканным вкусом и тает во рту
                     </div>
+                  </div>
                 </div>
-            </div>
-        </header>
-
-        <!--ПРЕИМУЩЕСТВА-->
-
-
-
-
-
-
-
-
-        <!--Продукция-->
-        <div class="production">
-            <h1>Продукция</h1>
-            <div class="itc-slider" data-slider="itc-slider" data-autoplay="false" data-interval="7000">
-                <div class="itc-slider__wrapper">
-                    <div class="itc-slider__items">
-                        <div class="itc-slider__item">
-                            <!-- Контент 1 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-01.jpg" alt="Продукт 1">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-1
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 2 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-02.jpg" alt="Продукт 2">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-2
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 3 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-03.jpg" alt="Продукт 3">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-3
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 4 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-04.jpg" alt="Продукт 4">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-4
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 5 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-05.jpg" alt="Продукт 5">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-5
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 6 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-06.jpg" alt="Продукт 6">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-6
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 7 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-07.jpg" alt="Продукт 7">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-7
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 8 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-08.jpg" alt="Продукт 8">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-8
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 9 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-09.jpg" alt="Продукт 9">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-9
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="itc-slider__item">
-                            <!-- Контент 10 слайда -->
-                            <div class="production-slider-card">
-                                <div class="production-slider-card-img">
-                                    <img src="assets/img/products/photo-10.jpg" alt="Продукт 10">
-                                </div>
-                                <div class="production-slider-card-info">
-                                    <h4>
-                                        Продукт-10
-                                    </h4>
-                                    <div>
-                                        Данный продукт отличается изысканным вкусом и тает во рту
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 5 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-05.jpg"
+                      alt="Продукт 5"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-5</h4>
+                    <div>
+                      Данный продукт отличается изысканным вкусом и тает во рту
                     </div>
+                  </div>
                 </div>
-                <!-- Кнопки для перехода к предыдущему и следующему слайду -->
-                <button class="itc-slider__btn itc-slider__btn_prev"></button>
-                <button class="itc-slider__btn itc-slider__btn_next"></button>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 6 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-06.jpg"
+                      alt="Продукт 6"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-6</h4>
+                    <div>
+                      Данный продукт отличается изысканным вкусом и тает во рту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 7 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-07.jpg"
+                      alt="Продукт 7"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-7</h4>
+                    <div>
+                      Данный продукт отличается изысканным вкусом и тает во рту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 8 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-08.jpg"
+                      alt="Продукт 8"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-8</h4>
+                    <div>
+                      Данный продукт отличается изысканным вкусом и тает во рту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 9 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-09.jpg"
+                      alt="Продукт 9"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-9</h4>
+                    <div>
+                      Данный продукт отличается изысканным вкусом и тает во рту
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item">
+                <!-- Контент 10 слайда -->
+                <div class="production-slider-card">
+                  <div class="production-slider-card-img">
+                    <img
+                      src="assets/img/products/photo-10.jpg"
+                      alt="Продукт 10"
+                    >
+                  </div>
+                  <div class="production-slider-card-info">
+                    <h4>Продукт-10</h4>
+                    <div>
+                      Данный продукт отличается изысканным вкусом и тает во рту
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+          <button class="itc-slider__btn itc-slider__btn_prev"></button>
+          <button class="itc-slider__btn itc-slider__btn_next"></button>
         </div>
+      </div>
 
-        <div class="production-conteiner-center">
-            <div class="button-getprice">
-                <div class="button-getprice-core" onclick="showCallbackForm();">
-                    Получить прайс
-                </div>
-            </div>
+      <div class="production-conteiner-center">
+        <div class="button-getprice">
+          <div class="button-getprice-core" onclick="showCallbackForm();">
+            Получить прайс
+          </div>
         </div>
+      </div>
 
-
-
-
-        <!--О нас-->
-        <div class="about-section">
-            <h1>О НАС</h1>
-            <div class="company-description">
-                <p>Компания "Еда Морей" занимается прямыми поставками морепродуктов с Дальнего Востока, а также их последующей реализацией крупным и мелким оптом по всей России. Кроме того, мы осуществляем вторичную переработку крабовой продукции на собственном
-                    отестованном цеху в городе Москва. Сотрудничая с нами, вы всегда можете быть уверены в качестве товара, и надежности как поставщика.</p>
-            </div>
+      <!--О нас-->
+      <div class="about-section">
+        <h1>О НАС</h1>
+        <div class="company-description">
+          <p>
+            Компания "Еда Морей" занимается прямыми поставками морепродуктов с
+            Дальнего Востока, а также их последующей реализацией крупным и
+            мелким оптом по всей России. Кроме того, мы осуществляем вторичную
+            переработку крабовой продукции на собственном отестованном цеху в
+            городе Москва. Сотрудничая с нами, вы всегда можете быть уверены в
+            качестве товара, и надежности как поставщика.
+          </p>
         </div>
+      </div>
 
+      <!--Контакты-->
+      <h1>контакты</h1>
 
+      <div class="map">
+        <script    type="text/javascript"  charset="utf-8"  async 
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c0016abeafff3cd20067c42e5c123c1e53a4db19bf99a8bdd01d797450fa07c&amp;lang=ru_RU&amp;scroll=true">
+        </script>
+      </div>
 
-
-
-        <!--Контакты-->
-        <h1>контакты</h1>
-        
-        <div class="map">
-            <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c0016abeafff3cd20067c42e5c123c1e53a4db19bf99a8bdd01d797450fa07c&amp;lang=ru_RU&amp;scroll=true"></script>
+      <div class="contact_ways">
+        <div class="address1">
+          <p>г. Москва,</p>
+          <p>ул. Средняя Калитниковская 27</p>
         </div>
-
-        <div class="contact_ways">
-            <div class="address1">
-                <p>г. Москва,</p>
-                <p>ул. Средняя Калитниковская 27</p>
-            </div>
-            <div class="address2">
-                <p>г. Домодедово,</p>
-                <p>ул. Преображенская 2</p>
-            </div>
-            <div class="telephone">
-                <div class="phone_img">
-                    <img src="assets/img/phone.png" alt="#">
-                </div>
-                <div class="mobile">
-                    <a href="tel:+7 924 - 1178 - 924">+7 924 - 1178 - 924</a>
-                </div>
-            </div>
-            <div class="e-mail">
-                <div class="email_img">
-                    <img src="assets/img/email.png" alt="#">
-                </div>
-                <div class="post">
-                    <a href="e-mail">edamorei@mail.ru</a>
-                </div>
-            </div>
+        <div class="address2">
+          <p>г. Домодедово,</p>
+          <p>ул. Преображенская 2</p>
         </div>
-
-
-
+        <div class="telephone">
+          <div class="phone_img">
+            <img src="assets/img/phone.png" alt="#" >
+          </div>
+          <div class="mobile">
+            <a href="tel:+7 924 - 1178 - 924">+7 924 - 1178 - 924</a>
+          </div>
+        </div>
+        <div class="e-mail">
+          <div class="email_img">
+            <img src="assets/img/email.png" alt="#" >
+          </div>
+          <div class="post">
+            <a href="e-mail">edamorei@mail.ru</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-<footer>
-    <div class="footer__container">
+    <footer>
+      <div class="footer__container">
         <div class="footer__wrapper">
-            <ul class="footer__content-left">
-                <li class="left__item left__item-msk">
-                    г. Москва, Средняя Калитниковская улица 27</li>
-                <li class="left__item left__item-call">
-                    +7 (924) 1178-924</li>
-                <li class="left__item left__item-mail">
-                    edamorei@mail.ru</li>
-            </ul>
+          <ul class="footer__content-left">
+            <li class="left__item left__item-msk">
+              г. Москва, Средняя Калитниковская улица 27
+            </li>
+            <li class="left__item left__item-call">+7 (924) 1178-924</li>
+            <li class="left__item left__item-mail">edamorei@mail.ru</li>
+          </ul>
 
-            <ul class="footer__content-right">
-                <li class="rigth__item">Продукция</li>
-                <li class="rigth__item">Преимущества</li>
-                <li class="rigth__item">О нас</li>
-            </ul>
-
+          <ul class="footer__content-right">
+            <li class="rigth__item">Продукция</li>
+            <li class="rigth__item">Преимущества</li>
+            <li class="rigth__item">О нас</li>
+          </ul>
         </div>
         <div class="footer__rights">
-            Designed by ITGirls © 2023 All rights reserved
+          Designed by ITGirls © 2023 All rights reserved
         </div>
-    </div>
-</footer>
-
-
-
+      </div>
+    </footer>
 
     <!--Блок кода получения обратного звонка-->
-    <div id="background-modal">
-
-    </div>
+    <div id="background-modal"></div>
     <form id="form-callback">
-        <a id="btn-close" href="#">x</a>
-        <h4>Выберите приложение, <br>чтобы запросить прайс</h4>
-        <div class="contact-info">
+      <a id="btn-close" href="#">x</a>
+      <h4>Выберите приложение, <br >чтобы запросить прайс</h4>
+      <div class="contact-info">
+        <div class="form-callback-messenger"></div>
 
-            <div class="form-callback-messenger">
-            </div>
-
-            <div class="form-callback-messenger">
-                <a href="tel:+79241178924" target="_blank">
-                    <img src="assets/img/phone-appl.png" alt="Телефон">
-                </a>
-            </div>
-
-            <div class="form-callback-messenger">
-            </div>
-
-            <div class="form-callback-messenger">
-                <a href="tg://resolve?domain=bogdanov_da" target="_blank">
-                    <img src="assets/img/telegram.png" alt="Telegram">
-                </a>
-            </div>
-
-            <div class="form-callback-messenger">
-                <a href="https://wa.me/79241178924?text=$priceMessText" target="_blank">
-                    <img src="assets/img/whatsapp.png" alt="WhatsApp">
-                </a>
-            </div>
-
-            <div class="form-callback-messenger">
-                <a href="viber://chat?number=%2B79241178924" target="_blank">
-                    <img src="assets/img/viber.png" alt="Viber">
-                </a>
-            </div>
-
-            <div class="form-callback-messenger">
-            </div>
-            
-            <div class="form-callback-messenger">
-                <a href="sms:+79241178924" target="_blank">
-                    <img src="assets/img/sms-appl.png" alt="Телефон">
-                </a>
-            </div>
-            
-            <div class="form-callback-messenger">
-            </div>
+        <div class="form-callback-messenger">
+          <a href="tel:+79241178924" target="_blank">
+            <img src="assets/img/phone-appl.png" alt="Телефон" >
+          </a>
         </div>
+
+        <div class="form-callback-messenger"></div>
+
+        <div class="form-callback-messenger">
+          <a href="tg://resolve?domain=bogdanov_da" target="_blank">
+            <img src="assets/img/telegram.png" alt="Telegram" >
+          </a>
+        </div>
+
+        <div class="form-callback-messenger">
+          <a
+            href="https://wa.me/79241178924?text=$priceMessText"
+            target="_blank"
+          >
+            <img src="assets/img/whatsapp.png" alt="WhatsApp" >
+          </a>
+        </div>
+
+        <div class="form-callback-messenger">
+          <a href="viber://chat?number=%2B79241178924" target="_blank">
+            <img src="assets/img/viber.png" alt="Viber" >
+          </a>
+        </div>
+
+        <div class="form-callback-messenger"></div>
+
+        <div class="form-callback-messenger">
+          <a href="sms:+79241178924" target="_blank">
+            <img src="assets/img/sms-appl.png" alt="Телефон" >
+          </a>
+        </div>
+
+        <div class="form-callback-messenger"></div>
+      </div>
     </form>
     <!--Конец блока кода получения обратного звонка-->
-
-</body>
-
+  </body>
 </html>
