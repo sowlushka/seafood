@@ -108,9 +108,11 @@ a {
     .address1, .address2 {
         font-size: 18px;
     }
+
     .post {
         margin-left: 5px;
     }
+    
     .phone_img, .image_1 {
         width: 50px;
         height: 51px;  
