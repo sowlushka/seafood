@@ -20,6 +20,8 @@ p {
 }
 
 a {
+    color: #303030;
+    text-decoration: none;
     font-style: italic;
 }
 
@@ -80,16 +82,47 @@ a {
     height: 50vh;
 }
 
+.large-show{
+    display: block;
+}
+
+.small-show{
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
     .contact_ways {
         width: 100%;
-        column-gap: 50px;     
+        margin-top: 20px;
+        column-gap: 50px; 
+        row-gap: 0px;    
 }
     .address2, .e-mail {
         justify-self: center;
     }
-    .email_img {
-        margin-right: 10px;
+    
+    .address1, .address2 {
+        font-size: 18px;
+    }
+
+    .post {
+        margin-left: 5px;
+    }
+    
+    .phone_img, .image_1 {
+        width: 50px;
+        height: 51px;  
+    }
+    .mobile {
+        margin-left: 5px;
+    }
+    .email_img, .image_2 {
+        width: 54px;
+        height: 42px;
     }
 }
 
@@ -107,10 +140,18 @@ a {
         display: flex;
         column-gap: 10px;
         font-size: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     a {
         font-size: x-large;
+    }
+
+    .large-show{
+        display: none;
+    }
+
+    .small-show{
+        display: block;
     }
 
 }
