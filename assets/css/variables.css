@@ -13,6 +13,9 @@
 
     /*Размеры шрифтов для блока О нас*/
     --screen-calculated-aabout-font-size:calc(0.006 * var(--body-container-width) + 16.2px);
+
+    /*Размер шрифта заголовков*/
+    --screen-calculated-h1-hont-size: calc(0.013 * var(--body-container-width) + 27px);
     
     /*Стили кнопки "Получить прайс*/
     --getprice-padding-core-vertical: calc(1.1 * var(--screen-mobile-menu-font-size));/*Оступы для внутреннего элемента*/

@@ -92,7 +92,7 @@ a {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 40px;
+        /*font-size: 40px;*/
         margin-bottom: 30px;
     }
     .contact_ways {
@@ -128,7 +128,7 @@ a {
 
 @media screen  and (max-width: 560px){
     h1 {
-        font-size: 40px;
+        /*font-size: 40px;*/
         margin-bottom: 30px;
     }
     .contact_ways {
