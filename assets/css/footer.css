@@ -5,11 +5,6 @@
 footer {
     background-color: #322C2C;
     width: 100%;
-    /*
-    margin-left: var(--header-margin-horizontal);
-    margin-right: var(--header-margin-horizontal);
-    */
-
 }
 
 .footer__container {
@@ -57,7 +52,7 @@ ul {
 }
 
 .left__item-msk::before {
-    background-image: url('../img/location2.png');
+    background-image: url('../img/pngtlocation.png');
 
 }
 
@@ -75,4 +70,18 @@ ul {
     display: flex;
     font-size: smaller;
     justify-content: center;
+}
+
+footer a{
+    color: white;
+}
+
+@media (max-width: 480px){
+    .footer__container{
+        font-size: 12px;
+        padding: 30px;
+    }
+    .footer__wrapper{
+        display: block;
+    }
 }

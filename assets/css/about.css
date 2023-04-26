@@ -8,3 +8,7 @@
 .company-description {
     font-size: var(--screen-calculated-aabout-font-size);
 }
+
+.company-description p{
+    text-align: justify;
+}
