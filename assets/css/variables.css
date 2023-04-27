@@ -7,8 +7,9 @@
 
     
     /*Размеры шрифтов для меню "Навигация"*/
-    --screen-calculated-nav-font-size:calc(0.011 * var(--body-container-width) + 10.7px);
+    --screen-calculated-nav-font-size:calc(0.008 * var(--body-container-width) + 10px);
     --screen-mobile-menu-font-size: calc(var(--screen-calculated-nav-font-size) + 2px);/*Размер шрифта для меню мобильного экрана*/
+    --screen-mobile-menu-font-height: calc(3 * var(--screen-mobile-menu-font-size));
     
 
     /*Размеры шрифтов для блока О нас*/
@@ -20,4 +21,5 @@
     /*Стили кнопки "Получить прайс*/
     --getprice-padding-core-vertical: calc(1.1 * var(--screen-mobile-menu-font-size));/*Оступы для внутреннего элемента*/
     --getprice-padding-core-horizontal: calc(2.5 * var(--screen-mobile-menu-font-size));/*Отступы для внутреннего элемента*/
+    --getprice-font-size: var(--screen-mobile-menu-font-size); /*Размер шрифта внутри кнопки*/
 }
