@@ -21,4 +21,5 @@
     /*Стили кнопки "Получить прайс*/
     --getprice-padding-core-vertical: calc(1.1 * var(--screen-mobile-menu-font-size));/*Оступы для внутреннего элемента*/
     --getprice-padding-core-horizontal: calc(2.5 * var(--screen-mobile-menu-font-size));/*Отступы для внутреннего элемента*/
+    --getprice-font-size: var(--screen-mobile-menu-font-size); /*Размер шрифта внутри кнопки*/
 }

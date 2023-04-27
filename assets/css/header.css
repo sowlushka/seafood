@@ -3,7 +3,7 @@
 :root{
     --header-margin-top: 0px;
     --header-margin-horizontal: calc((var( --body-container-width) - 100vw) / 2 + 1vw);
-    --header-background-img-file: url("../img/header2.jpg");
+    --header-background-img-file: url("../img/header-max-1.jpg");
     --header-background-image-width: 100vw;
     --header-background-image-height: 100vh;
     --header-background-image-scale-x: 100%;
@@ -26,6 +26,10 @@
     --hamburg-opened-padding-left: 0px;/*Сдвиг подложки открытого меню влево*/
     --hamburg-closed-shift-to-left: 20px;/*Сдвиг гамбургер меню от правого края влево*/
     --hamburg-opened-shift-to-left: -196px;
+
+    /*Параметры кнопки "Получить прайс*/
+    --header-getprice-width: 90vw;/*Ширина контейнера для кнопки "Получить прайс"*/
+    --header-getprice-position-top: 80vh;/*Абсолютное позиционирование кнопки на странице заголовка*/
 
 }
 
@@ -105,9 +109,11 @@ nav a:hover{
 .header-getprice{
 /*Класс для позиционирования кнопки button-getprice
 на странице заголовка*/ 
-    position: relative;
-    top: 75%;
+    position: absolute;
+    top: var(--header-getprice-position-top);
+    width: var(--header-getprice-width);
     text-align: center;
+    left: calc(50vw - var(--header-getprice-width)/2);
     font-size: var(--screen-mobile-menu-font-size);
 }
 
@@ -265,21 +271,11 @@ https://codepen.io/erikterwan/pen/EVzeRP
     -------------------------------------------------------------------------*/
 
 
-@media (max-width: 1200px)
-{
-    :root{
-    --header-background-image-position-x: 0%;
-    --header-background-image-scale-x: 110%;
-        
-    }
-}
-
-
 @media all and (orientation: portrait){
         :root{
-            --header-background-img-file: url("../img/header-min-1.jpg");
+            --header-background-img-file: url("../img/header-min-1-2.jpg");
             --header-logo-width: 75vw;
-            --header-logo-height: calc(var(--header-logo-width) / 3 * 2)
+            --header-logo-height: calc(var(--header-logo-width) / 3 * 2);
     }
 
     .logo{
@@ -297,8 +293,9 @@ https://codepen.io/erikterwan/pen/EVzeRP
         display: flex;
     }
 
+
     @media (max-width: 820px)
-    /*Фоновая картинка обрезается */
+    /*Фоновая картинка cо льдом слева обрезается без изменения масштаба*/
     {
 
         header{
@@ -308,10 +305,22 @@ https://codepen.io/erikterwan/pen/EVzeRP
     }
 
     @media (max-width: 580px)
-    /*Фоновая картинка обрезается */
+    /*Фоновая картинка со льдом слева ужимается от естественного размера до размера экрана.
+     Масштаб чуть уменьшается - резкость лучше */
+    {
+
+        header{
+            background-position: left top;
+            background-size: 100% 100%;
+        }
+    }
+
+         @media (max-width: 505px)
+    /*Фоновая картинка без льда ужимается от естественного размера до размеров экрана */
     {
         :root{
             --header-background-img-file: url("../img/header-min-0.jpg");
+            --header-getprice-position-top: 85vh;
         }
 
         header{
@@ -320,6 +329,43 @@ https://codepen.io/erikterwan/pen/EVzeRP
         }
     }
 
+}
+
+@media all and (orientation: landscape) and (min-aspect-ratio: 1768/1552) and (max-aspect-ratio: 1768/1280)
+/*Диапазон соотношения сторон, в котором изображение краба можно обрезать снизу.
+Пропорции не нарушаются*/
+{
+    :root{
+        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
+    }
+
+    header{
+        --header-background-width: 80vw;
+        --header-background-height: calc(1768 / 1552 * var(--header-background-width));
+        background-position: left top;
+        background-size: 100% var(--header-background-height);
+    }
+
+    
+}
+
+@media all and (orientation: landscape) and (min-aspect-ratio: 1768/1280)
+/*Для самых узких горизонтальных экранов подгружаем картинку с минимальным содержанием льда внизу
+*/
+{
+    :root{
+       --header-background-img-file: url("../img/header-max-2.jpg");
+       --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
+    }
+
+    /*header{
+        --header-background-width: 80vw;
+        --header-background-height: calc(1768 / 1552 * var(--header-background-width));
+        background-position: left top;
+        background-size: 100% var(--header-background-height);
+    }*/
+
+    
 }
 
 
