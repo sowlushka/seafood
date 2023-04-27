@@ -23,6 +23,7 @@
     top: calc(50vh - (var(--form-callback-height) / 2));
     /*left: calc(50vw - (var(--form-callback-width) / 2));*/
     border: 1px solid #000000;
+    border-radius: 20px;
     text-align: center;
     background-color: #FFFFFF;
     padding: var(--form-callback-padding-vertical) var(--form-callback-padding-horizontal);
