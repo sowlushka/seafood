@@ -67,9 +67,13 @@ ul {
 }
 
 .footer__rights {
-    display: flex;
     font-size: smaller;
-    justify-content: center;
+    text-align: center;
+}
+
+.footer__rights a{
+    font-style: normal;
+    
 }
 
 footer a{
