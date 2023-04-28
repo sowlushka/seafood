@@ -125,7 +125,6 @@ nav a:hover{
 
 
 
-/**/
 /*---------------------------------------------------
 Стили для работы меню кубика-бургера
 За основу взят пример отсюда: 
@@ -281,7 +280,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     }
 
     .logo{
-        left: calc( 50% - var(--header-logo-width) / 2);
+        /*left: calc( 50% - var(--header-logo-width) / 2)!important;*/
         max-height: 27vh;
         max-width: calc(27vh  / 2 * 3);
 
@@ -302,7 +301,9 @@ https://codepen.io/erikterwan/pen/EVzeRP
 
         :root{
             --header-background-img-file: url("../img/header-min-1-2.jpg");
-            --header-logo-width: 75vw;
+            --header-logo-height: 35vh;
+            --header-logo-width: calc(var(--header-logo-height) / 2 *3);
+            --header-logo-left: 0px;
 
             --header-getprice-position-top: 80vh;
         }
