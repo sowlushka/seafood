@@ -300,7 +300,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     {
 
         :root{
-            /*--header-background-img-file: url("../img/header-min-1-2.jpg");*/
+            --header-background-img-file: url("../img/header-min-1-2.jpg");
             --header-logo-height: 35vh;
             --header-logo-width: calc(var(--header-logo-height) / 2 *3);
             --header-logo-left: 0px;
@@ -325,6 +325,9 @@ https://codepen.io/erikterwan/pen/EVzeRP
     /*Фоновая картинка со льдом слева ужимается от естественного размера до размера экрана.
      Масштаб чуть уменьшается - резкость лучше */
     {
+        :root{
+            --header-background-img-file: url("../img/header-min-0.jpg");
+        }
 
         header{
             background-position: left top;
