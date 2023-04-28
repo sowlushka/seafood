@@ -80,7 +80,7 @@ header nav{
 
 nav a{
     display:inline-block;
-    padding: var(--header-nav-padding-vertical) 0.8vw;
+    padding: var(--header-nav-padding-vertical) 2vw;
     letter-spacing: calc(0.01 * var(--screen-calculated-nav-font-size));
     font-size: var(--screen-calculated-nav-font-size);
     line-height: var(--screen-mobile-menu-font-height);
@@ -272,16 +272,18 @@ https://codepen.io/erikterwan/pen/EVzeRP
 
 
 @media all and (orientation: portrait){
-        :root{
-            --header-background-img-file: url("../img/header-min-1-2.jpg");
-            --header-logo-width: 75vw;
-            --header-logo-height: calc(var(--header-logo-width) / 3 * 2);
+    :root{
+        --header-background-img-file: url("../img/header-max-3.jpg");
+        --header-logo-width: 75vw;
+        --header-logo-height: calc(var(--header-logo-width) / 3 * 2);
+
+        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
     }
 
     .logo{
         left: calc( 50% - var(--header-logo-width) / 2);
-        max-height: 35vh;
-        /*max-width: 720px;*/
+        max-height: 27vh;
+        max-width: calc(27vh  / 2 * 3);
 
     }
 
@@ -298,9 +300,23 @@ https://codepen.io/erikterwan/pen/EVzeRP
     /*Фоновая картинка cо льдом слева обрезается без изменения масштаба*/
     {
 
+        :root{
+            --header-background-img-file: url("../img/header-min-1-2.jpg");
+            --header-logo-width: 75vw;
+
+            --header-getprice-position-top: 80vh;
+        }
+
         header{
             background-position: right top;
             background-size: 820px 100%;
+
+        }
+
+        .logo{
+            max-width: 75vw;
+            max-height: calc(75vw  / 3 * 2);
+            
         }
     }
 
@@ -330,6 +346,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     }
 
 }
+
 
 @media all and (orientation: landscape) and (min-aspect-ratio: 1768/1552) and (max-aspect-ratio: 1768/1280)
 /*Диапазон соотношения сторон, в котором изображение краба можно обрезать снизу.
