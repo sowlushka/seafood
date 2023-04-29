@@ -19,6 +19,7 @@ footer {
 .footer-logo-img {
     display: flex;
     position: absolute;
+    z-index: -1;
     left: 0px;
     top: 0px;
     height: 100%;
