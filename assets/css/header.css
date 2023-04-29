@@ -276,7 +276,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
         --header-logo-width: 75vw;
         --header-logo-height: calc(var(--header-logo-width) / 3 * 2);
 
-        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
+        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 40px);
     }
 
     .logo{
@@ -340,7 +340,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     {
         :root{
             --header-background-img-file: url("../img/header-min-0.jpg");
-            --header-getprice-position-top: 85vh;
+            --header-getprice-position-top: 80vh;
         }
 
         header{
@@ -357,7 +357,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
 Пропорции не нарушаются*/
 {
     :root{
-        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
+        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 40px);
     }
 
     header{
