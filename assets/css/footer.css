@@ -128,4 +128,8 @@ footer a {
     .footer__wrapper {
         display: block;
     }
+
+    .footer__container a{
+        font-size: 12px;
+    }
 }
