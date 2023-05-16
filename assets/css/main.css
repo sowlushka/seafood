@@ -2,6 +2,10 @@
 @import url(variables.css);
 /*Подгружаем константы проекта: ширина контейнера, макс. ширина и т.д.*/
 
+html{
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -10,6 +14,7 @@ body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
+
 
 
 .body-container { 
