@@ -370,7 +370,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     
 }
 
-@media all and (orientation: landscape) and (min-aspect-ratio: 1768/1280)
+@media all and (orientation: landscape) and (min-aspect-ratio: 1768/1280) and (max-aspect-ratio: 16/9)
 /*Для самых узких горизонтальных экранов подгружаем картинку с минимальным содержанием льда внизу
 */
 {
@@ -379,16 +379,35 @@ https://codepen.io/erikterwan/pen/EVzeRP
        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
     }
 
-    /*header{
-        --header-background-width: 80vw;
-        --header-background-height: calc(1768 / 1552 * var(--header-background-width));
-        background-position: left top;
-        background-size: 100% var(--header-background-height);
-    }*/
+    header{
+        /*--header-background-width: 80vw;*/
+        /*--header-background-height: calc(1768 / 1552 * var(--header-background-width));*/
+        background-position: center center;
+        /*background-size: 100% var(--header-background-height);*/
+        background-size: 100% 100%;
+    }
 
-    
 }
 
+
+
+@media all and (orientation: landscape) and (min-aspect-ratio: 16/9)
+/*Для самых узких горизонтальных экранов подгружаем картинку с минимальным содержанием льда внизу
+*/
+{
+    :root{
+       --header-background-img-file: url("../img/header-max.jpg");
+       --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
+    }
+
+    header{
+        /*--header-background-width: 80vw;*/
+        /*--header-background-height: calc(1768 / 1552 * var(--header-background-width));*/
+        background-position: center center;
+        /*background-size: 100% var(--header-background-height);*/
+        background-size: 100% 100%;
+    }
+}
 
 @media (max-width: 800px){
 
