@@ -2,9 +2,11 @@
 @import url(variables.css);
 /*Подгружаем константы проекта: ширина контейнера, макс. ширина и т.д.*/
 
-html{
+/*html{
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
-}
+}*/
 
 body {
     display: flex;
@@ -12,6 +14,8 @@ body {
     align-items: center;
     /*Шрифты для всего проекта*/
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
