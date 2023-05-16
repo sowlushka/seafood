@@ -51,8 +51,9 @@ header{
     height: var(--header-logo-height);
     width: var(--header-logo-width);
 
+    /*
     margin-top: 10px;
-    margin-left: 3%;
+    margin-left: 3%;*/
     float: left;
 }
 
@@ -317,6 +318,8 @@ https://codepen.io/erikterwan/pen/EVzeRP
         .logo{
             max-width: 75vw;
             max-height: calc(75vw  / 3 * 2);
+            margin-top: 10px;
+            margin-left: 3%;
             
         }
     }
@@ -398,6 +401,7 @@ https://codepen.io/erikterwan/pen/EVzeRP
     :root{
        --header-background-img-file: url("../img/header-max.jpg");
        --header-getprice-position-top: calc(100vh - 2 * var(--getprice-padding-core-vertical) - var(--getprice-font-size) - 30px);
+       --header-logo-left: -2vw;
     }
 
     header{

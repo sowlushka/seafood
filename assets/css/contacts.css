@@ -60,11 +60,13 @@ a {
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .address1, .address2 {
     font-size: 20px;
     font-weight: 500;
+    font-style: italic;
 }
 
 .address1 {
@@ -98,7 +100,8 @@ a {
         width: 100%;
         margin-top: 20px;
         column-gap: 50px; 
-        row-gap: 0px;    
+        row-gap: 0px;   
+        font-style: italic; 
 }
     .address2, .e-mail {
         justify-self: center;
@@ -133,7 +136,9 @@ a {
         margin-top: 20px;
         display: inline-block;
         width: 100%;  
+        font-style: italic;
     }
+
     .address1, .address2 {
         display: flex;
         column-gap: 10px;
