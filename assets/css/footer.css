@@ -34,7 +34,8 @@ footer img {
     /*padding: 10px 0px;*/
     opacity: 10%; 
     height: 90%;
-    width: auto;
+    /*width: 90%;*/
+    object-fit: content;
 }
 
 
@@ -135,4 +136,21 @@ footer a {
     .footer__container a{
         font-size: 12px;
     }
+
+    footer img {
+        width: 80%;
+        height: auto;
+    }
 }
+
+/*
+@media (max-aspect-ratio: 3/2)
+{
+    footer img {
+        height: auto;
+        width: 90%;
+        object-fit: cover;
+    }
+
+}
+*/
