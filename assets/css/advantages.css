@@ -23,6 +23,7 @@
 }
 .advantages-container-item-info{
     text-align: justify;
+    font-weight: 400;
 }
 
 @media screen and (max-width:480px){
