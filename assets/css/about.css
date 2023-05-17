@@ -6,7 +6,8 @@
 
 
 .company-description {
-    font-size: var(--screen-calculated-aabout-font-size);
+    font-size: var(--screen-calculated-about-font-size);
+    font-weight: 400;
 }
 
 .company-description p{
